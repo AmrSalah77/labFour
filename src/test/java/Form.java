@@ -6,12 +6,19 @@ public class Form extends Object{
 
     private final String firstName = "Amr";
     private final String lastName = "Salah";
+    private final String jobTitle = "Student";
 
     @FindBy(id = "first-name")
     private WebElement first_name;
 
     @FindBy(id = "last-name")
     private WebElement last_name;
+
+    @FindBy(id="job-title")
+    private WebElement job_title;
+
+    @FindBy(id="radio-button-2")
+    private WebElement education;
 
     @FindBy(xpath = "//a[contains(text(),'Submit')]")
     private WebElement submit_button;
@@ -29,6 +36,14 @@ public class Form extends Object{
 
     public void fillLastName(){
         this.last_name.sendKeys(lastName);
+    }
+
+    public void fillJobTitle(){
+        this.job_title.sendKeys(jobTitle);
+    }
+
+    public void chooseCollege(){
+        this.education.click();
     }
 
     public void clickSubmitButton(){

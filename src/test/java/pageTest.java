@@ -20,6 +20,8 @@ public class pageTest {
         Form webForm = new Form(driver);
         webForm.fillFirstName();
         webForm.fillLastName();
+        webForm.fillJobTitle();
+        webForm.chooseCollege();
         webForm.clickSubmitButton();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         webForm.verifySuccess();
